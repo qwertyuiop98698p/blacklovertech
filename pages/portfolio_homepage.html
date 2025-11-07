@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janarthanan - Full-Stack Developer & IoT Specialist</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fjanarthana6832back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary font-inter">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="portfolio_homepage.html" class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">J</span>
+                        </div>
+                        <span class="font-semibold text-lg text-primary">Janarthanan</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="portfolio_homepage.html" class="nav-indicator active text-accent font-medium px-3 py-2 text-sm">Home</a>
+                        <a href="projects_showcase.html" class="nav-indicator text-text-secondary hover:text-accent transition-smooth px-3 py-2 text-sm">Projects</a>
+                        <a href="technical_blog.html" class="nav-indicator text-text-secondary hover:text-accent transition-smooth px-3 py-2 text-sm">Blog</a>
+                        <a href="services_pricing.html" class="nav-indicator text-text-secondary hover:text-accent transition-smooth px-3 py-2 text-sm">Services</a>
+                        <a href="about_experience.html" class="nav-indicator text-text-secondary hover:text-accent transition-smooth px-3 py-2 text-sm">About</a>
+                        <a href="contact_consultation.html" class="bg-accent text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-smooth">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle and Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="theme-toggle-sun" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+                        </svg>
+                        <svg class="theme-toggle-moon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-text-secondary hover:text-accent p-2">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-background border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="portfolio_homepage.html" class="block px-3 py-2 text-accent font-medium">Home</a>
+                <a href="projects_showcase.html" class="block px-3 py-2 text-text-secondary hover:text-accent transition-smooth">Projects</a>
+                <a href="technical_blog.html" class="block px-3 py-2 text-text-secondary hover:text-accent transition-smooth">Blog</a>
+                <a href="services_pricing.html" class="block px-3 py-2 text-text-secondary hover:text-accent transition-smooth">Services</a>
+                <a href="about_experience.html" class="block px-3 py-2 text-text-secondary hover:text-accent transition-smooth">About</a>
+                <a href="contact_consultation.html" class="block px-3 py-2 bg-accent text-white rounded-lg mx-3 mt-2 text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-surface to-white pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-fluid-4xl font-bold text-primary mb-6">
+                        Hi, I'm <span class="text-accent">Janarthanan</span>
+                    </h1>
+                    <div class="text-fluid-xl text-text-secondary mb-8 h-16 flex items-center justify-center lg:justify-start">
+                        <span class="font-mono">I'm a </span>
+                        <span id="typewriter-text" class="font-mono text-accent ml-2 border-r-2 border-accent animate-pulse"></span>
+                    </div>
+                    <p class="text-fluid-lg text-text-secondary mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Passionate full-stack developer specializing in modern web technologies, IoT solutions, and scalable SaaS applications. I transform ideas into powerful digital experiences.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="contact_consultation.html" class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-smooth hover-elevate">
+                            Get In Touch
+                        </a>
+                        <a href="javascript:void(0)" onclick="downloadResume()" class="border border-accent text-accent px-8 py-3 rounded-lg font-medium hover:bg-accent hover:text-white transition-smooth">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-full overflow-hidden shadow-large">
+                            <img src="/assets/janaa.jpg" alt="Janarthanan - Full-Stack Developer" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-accent text-white p-4 rounded-full shadow-medium">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-fluid-3xl font-bold text-primary mb-4">Featured Projects</h2>
+                <p class="text-fluid-lg text-text-secondary max-w-2xl mx-auto">
+                    Explore some of my recent work showcasing expertise in full-stack development, IoT solutions, and SaaS applications.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-medium hover-elevate transition-elevation overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="E-Commerce Platform" class="w-full h-full object-cover hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.pixabay.com/photo-2016/11/30/20/58/programming-1873854_1280.png'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-2">E-Commerce Platform</h3>
+                        <p class="text-text-secondary mb-4">Full-stack e-commerce solution with Laravel backend and Flutter mobile app.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Laravel</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Flutter</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">MySQL</span>
+                        </div>
+                        <a href="projects_showcase.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-medium hover-elevate transition-elevation overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="IoT Smart Home System" class="w-full h-full object-cover hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-2">IoT Smart Home System</h3>
+                        <p class="text-text-secondary mb-4">Comprehensive IoT solution for home automation with real-time monitoring.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-success/10 text-success text-sm rounded-full">IoT</span>
+                            <span class="px-3 py-1 bg-success/10 text-success text-sm rounded-full">Arduino</span>
+                            <span class="px-3 py-1 bg-success/10 text-success text-sm rounded-full">React</span>
+                        </div>
+                        <a href="projects_showcase.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-medium hover-elevate transition-elevation overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SaaS Analytics Dashboard" class="w-full h-full object-cover hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.pixabay.com/photo-2016/04/04/14/12/monitor-1307227_1280.jpg'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-2">SaaS Analytics Dashboard</h3>
+                        <p class="text-text-secondary mb-4">Multi-tenant analytics platform with real-time data visualization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-sm rounded-full">SaaS</span>
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-sm rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-sm rounded-full">Node.js</span>
+                        </div>
+                        <a href="projects_showcase.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="projects_showcase.html" class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-smooth hover-elevate">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section id="services-overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-fluid-3xl font-bold text-primary mb-4">Services & Expertise</h2>
+                <p class="text-fluid-lg text-text-secondary max-w-2xl mx-auto">
+                    Comprehensive development services tailored to bring your digital vision to life.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="text-center p-8 rounded-lg border border-border hover:shadow-medium transition-smooth">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Full-Stack Development</h3>
+                    <p class="text-text-secondary mb-6">End-to-end web application development with modern frameworks and best practices.</p>
+                    <div class="text-accent font-semibold text-lg mb-2">Starting at $2,500</div>
+                    <a href="services_pricing.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="text-center p-8 rounded-lg border border-border hover:shadow-medium transition-smooth">
+                    <div class="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">IoT Solutions</h3>
+                    <p class="text-text-secondary mb-6">Custom IoT applications and hardware integration for smart automation systems.</p>
+                    <div class="text-success font-semibold text-lg mb-2">Starting at $3,000</div>
+                    <a href="services_pricing.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="text-center p-8 rounded-lg border border-border hover:shadow-medium transition-smooth">
+                    <div class="w-16 h-16 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">SaaS Development</h3>
+                    <p class="text-text-secondary mb-6">Scalable multi-tenant SaaS platforms with advanced features and integrations.</p>
+                    <div class="text-warning font-semibold text-lg mb-2">Starting at $5,000</div>
+                    <a href="services_pricing.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                        Learn More →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Visualization Section -->
+    <section id="skills" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-fluid-3xl font-bold text-primary mb-4">Technical Skills</h2>
+                <p class="text-fluid-lg text-text-secondary max-w-2xl mx-auto">
+                    Proficiency across modern technologies and frameworks for comprehensive development solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Frontend Skills -->
+                <div>
+                    <h3 class="text-xl font-semibold text-primary mb-8">Frontend Development</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">React.js</span>
+                                <span class="text-text-secondary">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">Vue.js</span>
+                                <span class="text-text-secondary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">Flutter</span>
+                                <span class="text-text-secondary">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">TypeScript</span>
+                                <span class="text-text-secondary">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div>
+                    <h3 class="text-xl font-semibold text-primary mb-8">Backend Development</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">Laravel</span>
+                                <span class="text-text-secondary">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full skill-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">Node.js</span>
+                                <span class="text-text-secondary">87%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full skill-bar" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">Python</span>
+                                <span class="text-text-secondary">83%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full skill-bar" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-text-primary font-medium">MySQL/PostgreSQL</span>
+                                <span class="text-text-secondary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Blog Posts Section -->
+    <section id="recent-blog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-fluid-3xl font-bold text-primary mb-4">Latest Blog Posts</h2>
+                <p class="text-fluid-lg text-text-secondary max-w-2xl mx-auto">
+                    Insights, tutorials, and thoughts on modern web development, IoT, and emerging technologies.
+                </p>
+            </div>
+
+            <div id="blog-posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="technical_blog.html" class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-smooth hover-elevate">
+                    View All Posts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-fluid-3xl font-bold mb-6">Ready to Start Your Next Project?</h2>
+            <p class="text-fluid-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's collaborate to bring your ideas to life with cutting-edge technology and innovative solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact_consultation.html" class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-smooth hover-elevate">
+                    Start a Project
+                </a>
+                <a href="services_pricing.html" class="border border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-smooth">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer class="bg-surface py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Brand -->
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">J</span>
+                    </div>
+                    <span class="font-semibold text-lg text-primary">Janarthanan</span>
+                </div>
+                <p class="text-text-secondary mb-6 max-w-md">
+                    Full-stack developer passionate about creating innovative solutions with modern technologies.
+                </p>
+                <div class="flex space-x-4">
+                    <!-- Social Icons here -->
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="font-semibold text-primary mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="portfolio_homepage.html" class="text-text-secondary hover:text-accent transition-smooth">Home</a></li>
+                    <li><a href="projects_showcase.html" class="text-text-secondary hover:text-accent transition-smooth">Projects</a></li>
+                    <li><a href="services_pricing.html" class="text-text-secondary hover:text-accent transition-smooth">Services</a></li>
+                    <li><a href="about_experience.html" class="text-text-secondary hover:text-accent transition-smooth">About</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="font-semibold text-primary mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li class="text-text-secondary">janarthanan@example.com</li>
+                    <li class="text-text-secondary">+1 (555) 123-4567</li>
+                    <li><a href="contact_consultation.html" class="text-accent hover:text-blue-600 transition-smooth">Get in Touch</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies -->
+            <div>
+                <h3 class="font-semibold text-primary mb-4">Policies</h3>
+                <ul class="space-y-2">
+                    <li><a href="terms-and-conditions.html" class="text-text-secondary hover:text-accent transition-smooth">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html" class="text-text-secondary hover:text-accent transition-smooth">Privacy Policy</a></li>
+                    <li><a href="refund-policy.html" class="text-text-secondary hover:text-accent transition-smooth">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-border mt-8 pt-8 text-center">
+            <p class="text-text-secondary">© 2025 Janarthanan. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white p-3 rounded-full shadow-large hover:bg-blue-600 transition-smooth opacity-0 invisible">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <!-- Load JavaScript files -->
+    <script src="../js/theme-manager.js"></script>
+    <script src="../js/blog-manager.js"></script>
+    <script src="../js/contact-manager.js"></script>
+    <script>
+        // Typewriter Effect
+        const typewriterText = document.getElementById('typewriter-text');
+        const roles = ['Full-Stack Developer', 'IoT Specialist', 'SaaS Architect', 'Tech Innovator'];
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const currentRole = roles[currentRoleIndex];
+            
+            if (isDeleting) {
+                typewriterText.textContent = currentRole.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+            } else {
+                typewriterText.textContent = currentRole.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && currentCharIndex === currentRole.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && currentCharIndex === 0) {
+                isDeleting = false;
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+
+        // Start typewriter effect
+        typeWriter();
+
+        // Load blog posts dynamically
+        function loadBlogPosts() {
+            const container = document.getElementById('blog-posts-container');
+            if (container && window.blogManager) {
+                const posts = window.blogManager.blogPosts.slice(0, 3); // Get first 3 posts
+                
+                container.innerHTML = posts.map(post => `
+                    <article class="bg-surface rounded-lg overflow-hidden hover-elevate transition-elevation">
+                        <div class="h-48 overflow-hidden">
+                            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg'; this.onerror=null;" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-text-secondary mb-3">
+                                <span>${new Date(post.date).toLocaleDateString()}</span>
+                                <span class="mx-2">•</span>
+                                <span>${post.readTime}</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-3">${post.title}</h3>
+                            <p class="text-text-secondary mb-4">${post.excerpt}</p>
+                            <a href="technical_blog.html" class="text-accent font-medium hover:text-blue-600 transition-smooth">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+                `).join('');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Skill Bar Animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.transition = 'width 1.5s ease-in-out';
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection);
+        }
+
+        // Download Resume Function
+        function downloadResume() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = 'javascript:void(0)'; // Placeholder for actual resume file
+            link.download = 'Janarthanan_Resume.pdf';
+            
+            // Simulate download (in real implementation, this would be an actual file)
+            alert('Resume download would start here. Please contact me for the latest version.');
+        }
+
+        // Navigation Active State
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-indicator');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Lazy Loading for Images
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.src;
+                    img.classList.remove('skeleton');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(loadBlogPosts, 100); // Small delay to ensure blog manager is loaded
+        });
+    </script>
+</body>
+</html>
